@@ -1,0 +1,372 @@
+/** CONFIGURAÇÃO PADRAO
+*******************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #f3f3f3;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+  
+  /** Area Contato/rede-social do topo 
+  *****************************************/
+#topo-area-contatos{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  top: 0px;
+}
+#topo-rede-sociais a{
+  display: inline-block;
+  color: black;
+  margin: 0px 4px;
+  font-size: 1.2em;
+}
+@media(max-width:500px){
+  #topo-area-contatos{
+    font-size: .6em;
+    height: 20px;
+  }
+}
+
+/** CONFIGURANDO MENU / HEADER
+********************************************/
+header{
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  margin-top: 22px;
+  top: 0px;
+}
+#area-logo{
+  display: inline-block;
+  align-items: center;
+  margin-left: 10px;
+  z-index: 300;
+}
+#area-logo img{
+  width: 55px;
+}
+#area-logo span{
+  display: inline-block;
+  text-indent: -9000px;
+}
+nav{
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  float: left;
+  margin: 0px 12px;
+}
+nav ul li a{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*BARRA MENU / HEADER 
+*******************************************/
+#area-barras{
+   display: none;
+}
+#container-barras{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.barras{
+  cursor: pointer;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.barras-item{
+  background: white;
+  padding: 2px;
+  margin: 4px;
+  width: 80%;
+  border-radius: 2px;
+}
+
+@media (max-width: 550px) {
+
+  #area-barras{
+    display: block;
+    z-index: 300;
+}
+
+  nav{
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-100%);
+    background: rgb(51, 51, 51);
+    transition: 0.3s ease;
+}
+
+.open{
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-0%);
+    background: rgb(51, 51, 51);
+    transition: 0.3s ease;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav ul li{
+  margin: 25px 0px;
+}
+nav ul li a{
+  border: 1px solid white;
+  padding: 2px 10px;
+}
+
+.bg-centraliza-bar{
+  display: flex;
+  justify-content: center;
+    transition: 0.3s ease;
+  align-items: center;
+}
+.bg-bar1{
+    transition: 0.3s ease;
+  transform: translateY(6px) rotate(40deg);
+}
+.bg-bar2{
+  transition: 0.3s ease;
+  display: none;
+}
+.bg-bar3{
+  transform: translateY(-6px) rotate(-40deg);
+    transition: 0.3s ease;
+
+}
+.scroll-body{
+  overflow: hidden;
+}
+
+}/* final medias*/
+
+
+/* CONFIGURANDO area-principal 
+************************************************/
+#area-principal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.conteudo-principal{
+  width: 50%;
+  padding: 50px;
+  text-indent: 0;
+  opacity: 1;
+  animation-name: areaPrincipal;
+  animation-duration: 800ms;
+}
+.conteudo-principal h1{
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 3.0em;
+  text-transform: uppercase;
+}
+.conteudo-principal p{
+  font-weight: 700;
+  font-size: 1.1em;
+  
+}
+.img-principal{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  text-indent: 0;
+  opacity: 1;
+  animation-name: imgPrincipal;
+  animation-duration: 800ms;
+}
+.img-principal img{
+  text-indent: 0;
+  opacity: 1;
+  animation-name: imgPrincipal;
+  animation-duration: 800ms;
+  width: 250px;
+}
+#titulo-media-width-655px{
+  display: none;
+}
+@keyframes areaPrincipal{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
+@keyframes imgPrincipal{
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* MEDIA area-principal
+********************************************/
+
+@media(max-width: 914px){
+  .img-principal img{
+    width: 200px;
+  }
+  .img-principal{
+    width: 30%;
+  }
+  .conteudo-principal{
+    width: 100%;
+  }
+}
+@media(max-width: 655px){
+  .img-principal{
+    display: none;
+  }
+  .conteudo-principal{
+    width: 100%;
+  }
+  /*INICIO TITULOW-655*/
+  #titulo-media-width-655px{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    background: #000;
+  }
+  .titulo-conteudo{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    color: white;
+  }
+  /*FINAL TITULOW-655*/
+}
+@media(max-width: 598px){
+  /*INICIO TITULOW-655*/
+  #titulo-media-width-655px{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    background: #000;
+  }
+  .titulo-conteudo{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    font-size: .8em;
+  }
+  /*FINAL TITULOW-655*/
+  .conteudo-principal .h1-princial{
+    font-size: 1.3em;
+  }
+  .conteudo-principal p{
+    font-size: 1em;
+  }
+}
+@media(max-width: 500px){
+  /*INICIO TITULOW-655*/
+  #titulo-media-width-655px{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    background: #000;
+  }
+  .titulo-conteudo{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    font-size: .5em;
+  }
+  /*FINAL TITULOW-655*/
+  .img-principal{
+    display: none;
+  }
+  .conteudo-principal .h1-princial{
+    font-size: 1.2em;
+  }
+  .conteudo-principal p{
+    font-size: .8em;
+  }
+
+}
+@media (max-width: 321px){
+  /*INICIO TITULOW-655*/
+  #titulo-media-width-655px{
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    background: #000;
+  }
+  .titulo-conteudo{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    font-size: .4em;
+  }
+  /*FINAL TITULOW-655*/
+  .conteudo-principal .h1-princial{
+    font-size: 1.2em;
+  }
+  .conteudo-principal p{
+    font-size: .8em;
+  }
+
+}
